@@ -36,8 +36,7 @@ public class AddFavorite extends AuthPO{
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         po.auth(username,password,driver);
 
-        WebElement search = driver.findElement(By.cssSelector(".mu-header__search input"));
-        search.sendKeys("мвидео");
+
         WebElement searchSuggestion = driver.findElement(By.cssSelector(".el-autocomplete-suggestion__list li span"));
         searchSuggestion.click();
 
